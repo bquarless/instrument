@@ -40,14 +40,14 @@ describe('BooksService', () => {
   });
 
   describe('findOne', () => {
-    describe('when coffee with ID exists', () => {
-      it('should return the coffee object', async () => {
+    describe('when book with ID exists', () => {
+      it('should return the book object', async () => {
         const bookId = '1';
         const expectedBook = {};
 
         bookRepository.findOne.mockReturnValue(expectedBook);
-        const coffee = await service.findOne(bookId);
-        expect(coffee).toEqual(expectedBook);
+        const book = await service.findOne(bookId);
+        expect(book).toEqual(expectedBook);
       });
     });
   });
